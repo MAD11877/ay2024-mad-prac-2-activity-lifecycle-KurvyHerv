@@ -14,16 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // Initialize a new User object
-        User user = new User ("John Doe", "MAD Developer",1, false);
-        // Get the TextViews and Button from the layout
-        TextView tvName = findViewById(R.id.tvName);
-        TextView tvDescription = findViewById(R.id.tvDescription);
-        Button btnFollow = findViewById(R.id.btnFollow);
-        // Set the TextViews with the User's name, description and default button message
-        tvName.setText(user. name);
-        tvDescription.setText(user.description);
-        btnFollow.setText("Follow");
+
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
@@ -32,6 +23,16 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        // Initialize a new User object
+        User user = new User ("John Doe", "MAD Developer",1, false);
+        // Get the TextViews and Button from the layout
+        TextView tvName = findViewById(R.id.tvName);
+        TextView tvDescription = findViewById(R.id.tvDescription);
+        Button btnFollow = findViewById(R.id.btnFollow);
+        // Set the TextViews with the User's name, description and default button message
+        tvName.setText(user.name);
+        tvDescription.setText(user.description);
+        btnFollow.setText("Follow");
     }
 }
 
